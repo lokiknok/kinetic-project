@@ -18,7 +18,7 @@ function highlightActiveNavLink() {
 
   navLinks.forEach(link => {
     const linkPath = link.getAttribute('href');
-    if (linkPath === currentPath) {
+    if (linkPath === currentPath || (currentPath === '' && linkPath === 'index.html')) {
       link.style.color = '#ff5500';
     }
   });
@@ -35,7 +35,7 @@ function formatDate(timestamp) {
   });
 }
 
-// Optional: Display success/info notification banners
+// Display success/info notification banners
 function showNotification(message, type = 'info') {
   const existingNotice = document.getElementById('kinetic-notice');
   if (existingNotice) existingNotice.remove();
