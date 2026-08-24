@@ -66,7 +66,7 @@ async function submitProposal() {
   const storedUser = JSON.parse(localStorage.getItem('kinetic_user') || '{}');
 
   try {
-    const res = await fetch('http://localhost:5000/api/proposals', {
+    const res = await fetch('/api/proposals', {
       method: 'POST',
       headers: { 
         'Content-Type': 'application/json',
