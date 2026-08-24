@@ -1,3 +1,59 @@
+/* Base Mobile Fixes */
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+img, table {
+  max-width: 100%;
+}
+
+/* Mobile Responsive Breakpoint */
+@media (max-width: 768px) {
+  /* Navbar Stacking */
+  .navbar, nav {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  /* Main Layout Containers */
+  .container, .main-content, .hero {
+    width: 90% !important;
+    padding: 1rem !important;
+  }
+
+  /* Form & Configurator Grid Stacking */
+  .grid, .step-group, .configurator-grid {
+    grid-template-columns: 1fr !important;
+    flex-direction: column !important;
+  }
+
+  /* Mobile Responsive Tables for Admin Dashboard */
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  /* Touch-friendly Buttons */
+  button, .pill, .btn-orange {
+    width: 100%;
+    padding: 0.8rem 1rem;
+  }
+}
 :root {
   --bg-black: #0a0a0a;
   --card-dark: #141414;
