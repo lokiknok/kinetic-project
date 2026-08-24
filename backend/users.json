@@ -1,0 +1,17 @@
+[
+  {
+    "id": "1",
+    "name": "System Administrator",
+    "email": "admin@kinetic.com",
+    "passwordHash": "scrypt:32768:8:1$gPESQ1HlV7mvi7Sh$dee2336cd53945a05210d3a39b1928a72717e1ef90644b155600d3d5a534a6f001e0af01a3c41057a98549f35875d97f0e64734c17dd4f487892e5cf16b472a5",
+    "role": "admin"
+  },
+  {
+    "id": "1787585972591",
+    "name": "lohith",
+    "email": "lohithv0126@gmail.com",
+    "passwordHash": "scrypt:32768:8:1$nwHG8QTjAgPItIck$7da391c6ce3c52d429f1f54060abc7210291d88153fe8a1f618bc45160d4bbdb891b9e2b2d9ef26e1b642dd97bb28c68a4c4b53a3a724b4d28292b3814209a9e",
+    "role": "user",
+    "createdAt": "2026-08-24T15:39:32.697241Z"
+  }
+]

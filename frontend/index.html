@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KINETIC | Web Engineering for High-Growth Startups</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* User Navigation Controls Styling */
+    .user-nav {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-left: 15px;
+    }
+
+    .user-greeting {
+      color: #aaaaaa;
+      font-size: 0.85rem;
+    }
+
+    .brand-orange-text {
+      color: #ff5500;
+      font-weight: 600;
+    }
+
+    .btn-outline-sm {
+      background: transparent;
+      color: #ffffff;
+      border: 1px solid #262626;
+      padding: 6px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn-outline-sm:hover {
+      background: #181818;
+      border-color: #ff5500;
+      color: #ff5500;
+    }
+
+    .btn-admin-highlight {
+      background: rgba(255, 85, 0, 0.1);
+      border-color: #ff5500;
+      color: #ff5500;
+    }
+
+    .btn-admin-highlight:hover {
+      background: #ff5500;
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a href="#" class="logo">KINETIC<span>.</span></a>
+    <div class="nav-links">
+      <a href="#trust">Why Trust Us</a>
+      <a href="#process">Process</a>
+      <a href="#outcomes">Outcomes</a>
+      <a href="#configurator" class="btn-orange">Start Project</a>
+      
+      <!-- Integrated User Controls Right Side -->
+      <div class="user-nav">
+        <!-- Admin-Only Button (Placed inside navbar, hidden by default) -->
+        <a id="admin-link" href="dashboard.html" class="btn-outline-sm btn-admin-highlight" style="display: none;">Admin Dashboard</a>
+        
+        <span id="user-greeting" class="user-greeting">Guest</span>
+        <button id="auth-btn" onclick="handleAuthAction()" class="btn-outline-sm">Sign In</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="tag">STRATEGY + DESIGN + SPEED</div>
+    <h1>WE BUILD WEBSITES THAT <br><span class="highlight">OUTPERFORM YOUR COMPETITION.</span></h1>
+    <p>Most agency sites focus only on visuals. We combine conversion strategy, high-speed code, and positioning to turn visitors into buyers.</p>
+    <div class="hero-btns">
+      <a href="#configurator" class="btn-orange btn-lg">Configure Your Build</a>
+      <a href="#process" class="btn-outline btn-lg">View Process</a>
+    </div>
+  </header>
+
+  <!-- SECTION 1: Why Trust Kinetic? -->
+  <section id="trust" class="section dark-section border-top">
+    <div class="section-title">
+      <span class="sub-tag orange-text">ENGINEERING STANDARDS</span>
+      <h2>Why Trust Kinetic?</h2>
+    </div>
+
+    <div class="trust-grid">
+      <div class="trust-card">
+        <div class="trust-icon"><i class="fa-solid fa-lock"></i></div>
+        <h3>Secure Development</h3>
+        <p>We write clean, vulnerability-tested code adhering to strict security protocols to keep your business and user data protected from day one.</p>
+      </div>
+
+      <div class="trust-card">
+        <div class="trust-icon"><i class="fa-solid fa-bolt"></i></div>
+        <h3>⚡ Performance Optimized</h3>
+        <p>Every line of code is optimized for lightning-fast loading speeds, ensuring near-instant page renders that prevent bounce rates.</p>
+      </div>
+
+      <div class="trust-card">
+        <div class="trust-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+        <h3> Mobile-First Design</h3>
+        <p>We design fluidly for handheld devices first before scaling to desktop, ensuring a flawless user experience across phones, tablets, and PCs.</p>
+      </div>
+
+      <div class="trust-card">
+        <div class="trust-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+        <h3> SEO Ready Architecture</h3>
+        <p>Built with search engines in mind, featuring clean semantic HTML markup, structured data, fast loading speeds, and optimized meta configurations.</p>
+      </div>
+
+      <div class="trust-card">
+        <div class="trust-icon"><i class="fa-solid fa-puzzle-piece"></i></div>
+        <h3>Easy CMS Handoff</h3>
+        <p>Manage and update your website content effortlessly without technical knowledge through a clean, intuitive content management interface.</p>
+      </div>
+
+      <div class="trust-card">
+        <div class="trust-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+        <h3> Post-Launch Support</h3>
+        <p>We stay with you post-deployment to resolve bugs, monitor site stability, and assist your team as your web presence scales.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: Process Section -->
+  <section id="process" class="section white-section">
+    <div class="section-title text-black">
+      <span class="sub-tag orange-text">HOW WE WORK</span>
+      <h2>Our Engineering Process</h2>
+    </div>
+
+    <div class="process-grid">
+      <div class="process-card">
+        <span class="step-num">01</span>
+        <h3>Discover</h3>
+        <p>Understand the business, customers, and competitors through deep-dive interviews and market research.</p>
+      </div>
+
+      <div class="process-card">
+        <span class="step-num">02</span>
+        <h3>Strategy</h3>
+        <p>Define clear positioning, messaging hierarchy, and user conversion goals before writing a single line of code.</p>
+      </div>
+
+      <div class="process-card">
+        <span class="step-num">03</span>
+        <h3>Design</h3>
+        <p>Create intuitive UI/UX wireframes and interactive prototypes, securing full approval before development begins.</p>
+      </div>
+
+      <div class="process-card">
+        <span class="step-num">04</span>
+        <h3>Build</h3>
+        <p>Develop the website with clean code prioritizing maximum speed, security, and responsive layouts.</p>
+      </div>
+
+      <div class="process-card">
+        <span class="step-num">05</span>
+        <h3>Test</h3>
+        <p>Thoroughly test on mobile devices, desktop screens, forms, navigation links, speed scores, and core SEO basics.</p>
+      </div>
+
+      <div class="process-card">
+        <span class="step-num">06</span>
+        <h3>Launch</h3>
+        <p>Deploy the website to production and provide comprehensive admin handover training and ongoing technical support.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: Grounded Outcomes Section -->
+  <section id="outcomes" class="section dark-section">
+    <div class="section-title">
+      <span class="sub-tag orange-text">BUILT FOR REAL DEVICES</span>
+      <h2>Optimized for Mobile & PC</h2>
+      <p class="section-desc">We build websites engineered to function reliably across every hardware platform.</p>
+    </div>
+
+    <div class="outcomes-grid">
+      <div class="outcomes-card">
+        <div class="device-tag"><i class="fa-solid fa-mobile-screen"></i> Mobile Experience</div>
+        <h3>Ultra-Fast Handheld Performance</h3>
+        <p>Over 60% of web traffic originates on mobile devices. We optimize touch targets, asset delivery, and mobile menu layouts to ensure lightning-fast interaction even on slower cellular networks.</p>
+        <ul class="check-list">
+          <li>✔ Adaptive layout adjustments for all phone screen sizes</li>
+          <li>✔ Lightweight asset footprints for quick mobile loading</li>
+        </ul>
+      </div>
+
+      <div class="outcomes-card">
+        <div class="device-tag"><i class="fa-solid fa-desktop"></i> PC & Desktop</div>
+        <h3>High-Resolution Precision</h3>
+        <p>For desktop users, we deliver high-impact widescreen layouts that present clear visual hierarchies, intuitive navigation, and quick lead capture points designed to boost engagement.</p>
+        <ul class="check-list">
+          <li>✔ Crisp display support across 1080p, 2K, and 4K monitors</li>
+          <li>✔ Clean keyboard and cursor navigation focus states</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Configurator Section -->
+  <section id="configurator" class="section dark-section">
+    <div class="config-box">
+      <div class="section-title">
+        <span class="sub-tag">INTERACTIVE PROTOTYPE</span>
+        <h2>Build Your Project Scope</h2>
+        <p class="section-desc">Select your requirements below to generate your custom project blueprint.</p>
+      </div>
+
+      <div class="step-group">
+        <label>1. Primary Objective</label>
+        <div class="pill-grid">
+          <button class="pill active" onclick="toggleOption(this)">Launch New Startup Site</button>
+          <button class="pill" onclick="toggleOption(this)">Complete Redesign</button>
+          <button class="pill" onclick="toggleOption(this)">Speed & Conversion Optimization</button>
+        </div>
+      </div>
+
+      <div class="step-group">
+        <label>2. Core Features Needed</label>
+        <div class="pill-grid">
+          <button class="pill active" onclick="toggleOption(this)">Custom UI/UX Design</button>
+          <button class="pill active" onclick="toggleOption(this)">Headless CMS (Easy Editing)</button>
+          <button class="pill" onclick="toggleOption(this)">Interactive Lead Calculator</button>
+          <button class="pill" onclick="toggleOption(this)">SEO & Performance Hardening</button>
+        </div>
+      </div>
+      
+      <div class="contact-inputs" style="margin-top: 1.5rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+        <input type="text" id="client-name" placeholder="Your Name" style="flex: 1; padding: 10px; background: #141414; border: 1px solid #262626; color: #fff; border-radius: 6px;" required>
+        <input type="tel" id="client-phone" placeholder="Phone Number" style="flex: 1; padding: 10px; background: #141414; border: 1px solid #262626; color: #fff; border-radius: 6px;" required>
+      </div>
+      <div class="summary-footer">
+        <div>
+          <span class="summary-label">Selected Deliverables</span>
+          <div id="selected-count" class="summary-value">3 Key Modules Selected</div>
+        </div>
+        <button class="btn-orange btn-lg" onclick="submitProposal()">Request Custom Proposal</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="logo">KINETIC<span>.</span></div>
+      <p>&copy; 2026 Kinetic Web Engineering. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/auth.js"></script>
+  <script src="js/script.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', checkAuthState);
+
+    function checkAuthState() {
+      const token = localStorage.getItem('kinetic_token');
+      const user = JSON.parse(localStorage.getItem('kinetic_user') || '{}');
+
+      const greetingEl = document.getElementById('user-greeting');
+      const authBtn = document.getElementById('auth-btn');
+      const adminLink = document.getElementById('admin-link');
+
+      if (!greetingEl || !authBtn) return;
+
+      if (token && user.name) {
+        greetingEl.innerHTML = `Signed in as <span class="brand-orange-text">${user.name}</span>`;
+        authBtn.innerText = 'Logout';
+
+        // Display the Admin Dashboard link strictly for Admin accounts
+        if (user.role === 'admin' && adminLink) {
+          adminLink.style.display = 'inline-block';
+        }
+      } else {
+        greetingEl.innerText = 'Not signed in';
+        authBtn.innerText = 'Sign In';
+        if (adminLink) {
+          adminLink.style.display = 'none';
+        }
+      }
+    }
+
+    function handleAuthAction() {
+      const token = localStorage.getItem('kinetic_token');
+
+      if (token) {
+        localStorage.removeItem('kinetic_token');
+        localStorage.removeItem('kinetic_user');
+        window.location.reload();
+      } else {
+        window.location.href = 'signin.html';
+      }
+    }
+  </script>
+</body>
+</html>
