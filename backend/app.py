@@ -13,8 +13,8 @@ FRONTEND_DIR = os.path.join(BASE_DIR, "../frontend")
 USERS_FILE = os.path.join(BASE_DIR, "users.json")
 PROPOSALS_FILE = os.path.join(BASE_DIR, "proposals.json")
 
-PORT = 5000
-JWT_SECRET = "supersecretkey"
+PORT = int(os.environ.get("PORT", 5000))
+JWT_SECRET = os.environ.get("JWT_SECRET", "kinetic_super_secret_jwt_encryption_key_2026_secure_32b")
 
 app = Flask(__name__, static_folder=FRONTEND_DIR, static_url_path="")
 CORS(app)

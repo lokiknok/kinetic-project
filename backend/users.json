@@ -3,7 +3,7 @@
     "id": "1",
     "name": "System Administrator",
     "email": "admin@kinetic.com",
-    "passwordHash": "scrypt:32768:8:1$gPESQ1HlV7mvi7Sh$dee2336cd53945a05210d3a39b1928a72717e1ef90644b155600d3d5a534a6f001e0af01a3c41057a98549f35875d97f0e64734c17dd4f487892e5cf16b472a5",
+    "passwordHash": "scrypt:32768:8:1$4GptsGDjQwJfdeyH$fc6f44fb848e5bc019bd79c66b134f623898107e3e573241e08810dcb0d3edfbecc0a276e6d2fc060931e9ba442566b784c9b537b6559389474bfcb0c54e6e2a",
     "role": "admin"
   },
   {

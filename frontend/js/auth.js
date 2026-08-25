@@ -9,10 +9,27 @@ function getCurrentUser() {
 // Global Auth UI Controller
 document.addEventListener('DOMContentLoaded', () => {
   const user = getCurrentUser();
-  const navLinks = document.getElementById('nav-links');
+  const greetingEl = document.getElementById('user-greeting');
+  const authBtn = document.getElementById('auth-btn');
+  const adminLink = document.getElementById('admin-link');
 
-  if (navLinks) {
-    if (user) {
+  if (greetingEl && authBtn) {
+    if (user && user.name) {
+      greetingEl.innerHTML = `Signed in as <span class="brand-orange-text">${user.name}</span>`;
+      authBtn.innerText = 'Logout';
+      if (user.role === 'admin' && adminLink) {
+        adminLink.style.display = 'inline-flex';
+      }
+    } else {
+      greetingEl.innerText = 'Guest';
+      authBtn.innerText = 'Sign In';
+      if (adminLink) {
+        adminLink.style.display = 'none';
+      }
+    }
+  } else {
+    const navLinks = document.getElementById('nav-links');
+    if (navLinks && user) {
       let adminBtn = user.role === 'admin' ? '<a href="dashboard.html" style="color:#ff5500;">Admin Dashboard</a>' : '';
       navLinks.innerHTML = `
         ${adminBtn}

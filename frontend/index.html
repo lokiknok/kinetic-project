@@ -2,68 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KINETIC | Web Engineering for High-Growth Startups</title>
-  <link rel="stylesheet" href="css/style.css?v=2.0">
+  <link rel="stylesheet" href="css/style.css">
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    /* User Navigation Controls Styling */
-    .user-nav {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-left: 15px;
-    }
-
-    .user-greeting {
-      color: #aaaaaa;
-      font-size: 0.85rem;
-    }
-
-    .brand-orange-text {
-      color: #ff5500;
-      font-weight: 600;
-    }
-
-    .btn-outline-sm {
-      background: transparent;
-      color: #ffffff;
-      border: 1px solid #262626;
-      padding: 6px 14px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 0.85rem;
-      font-weight: 500;
-      text-decoration: none;
-      transition: all 0.2s ease;
-    }
-
-    .btn-outline-sm:hover {
-      background: #181818;
-      border-color: #ff5500;
-      color: #ff5500;
-    }
-
-    .btn-admin-highlight {
-      background: rgba(255, 85, 0, 0.1);
-      border-color: #ff5500;
-      color: #ff5500;
-    }
-
-    .btn-admin-highlight:hover {
-      background: #ff5500;
-      color: #ffffff;
-    }
-  </style>
 </head>
 <body>
 
   <!-- Navigation Bar -->
   <nav class="navbar">
     <a href="#" class="logo">KINETIC<span>.</span></a>
-    <div class="nav-links">
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+      <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px;display:block;"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px;display:none;"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div class="nav-links" id="nav-links">
       <a href="#trust">Why Trust Us</a>
       <a href="#process">Process</a>
       <a href="#outcomes">Outcomes</a>
@@ -100,38 +54,75 @@
 
     <div class="trust-grid">
       <div class="trust-card">
-        <div class="trust-icon"><i class="fa-solid fa-lock"></i></div>
+        <div class="trust-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <path d="M9 12l2 2 4-4"/>
+          </svg>
+        </div>
         <h3>Secure Development</h3>
         <p>We write clean, vulnerability-tested code adhering to strict security protocols to keep your business and user data protected from day one.</p>
       </div>
 
       <div class="trust-card">
-        <div class="trust-icon"><i class="fa-solid fa-bolt"></i></div>
-        <h3>⚡ Performance Optimized</h3>
+        <div class="trust-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+          </svg>
+        </div>
+        <h3>Performance Optimized</h3>
         <p>Every line of code is optimized for lightning-fast loading speeds, ensuring near-instant page renders that prevent bounce rates.</p>
       </div>
 
       <div class="trust-card">
-        <div class="trust-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
-        <h3> Mobile-First Design</h3>
+        <div class="trust-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="5" y="2" width="14" height="20" rx="3"/>
+            <line x1="12" y1="18" x2="12.01" y2="18" stroke-width="2.5"/>
+            <path d="M9 5h6"/>
+          </svg>
+        </div>
+        <h3>Mobile-First Design</h3>
         <p>We design fluidly for handheld devices first before scaling to desktop, ensuring a flawless user experience across phones, tablets, and PCs.</p>
       </div>
 
       <div class="trust-card">
-        <div class="trust-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
-        <h3> SEO Ready Architecture</h3>
+        <div class="trust-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="7"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            <path d="M11 8v6"/>
+            <path d="M8 11h6"/>
+          </svg>
+        </div>
+        <h3>SEO Ready Architecture</h3>
         <p>Built with search engines in mind, featuring clean semantic HTML markup, structured data, fast loading speeds, and optimized meta configurations.</p>
       </div>
 
       <div class="trust-card">
-        <div class="trust-icon"><i class="fa-solid fa-puzzle-piece"></i></div>
+        <div class="trust-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+            <polyline points="2 17 12 22 22 17"/>
+            <polyline points="2 12 12 17 22 12"/>
+          </svg>
+        </div>
         <h3>Easy CMS Handoff</h3>
         <p>Manage and update your website content effortlessly without technical knowledge through a clean, intuitive content management interface.</p>
       </div>
 
       <div class="trust-card">
-        <div class="trust-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
-        <h3> Post-Launch Support</h3>
+        <div class="trust-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <circle cx="12" cy="12" r="4"/>
+            <line x1="4.93" y1="4.93" x2="9.17" y2="9.17"/>
+            <line x1="14.83" y1="14.83" x2="19.07" y2="19.07"/>
+            <line x1="14.83" y1="9.17" x2="19.07" y2="4.93"/>
+            <line x1="4.93" y1="19.07" x2="9.17" y2="14.83"/>
+          </svg>
+        </div>
+        <h3>Post-Launch Support</h3>
         <p>We stay with you post-deployment to resolve bugs, monitor site stability, and assist your team as your web presence scales.</p>
       </div>
     </div>
@@ -193,7 +184,13 @@
 
     <div class="outcomes-grid">
       <div class="outcomes-card">
-        <div class="device-tag"><i class="fa-solid fa-mobile-screen"></i> Mobile Experience</div>
+        <div class="device-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="5" y="2" width="14" height="20" rx="3"/>
+            <line x1="12" y1="18" x2="12.01" y2="18" stroke-width="2.5"/>
+          </svg>
+          Mobile Experience
+        </div>
         <h3>Ultra-Fast Handheld Performance</h3>
         <p>Over 60% of web traffic originates on mobile devices. We optimize touch targets, asset delivery, and mobile menu layouts to ensure lightning-fast interaction even on slower cellular networks.</p>
         <ul class="check-list">
@@ -203,7 +200,14 @@
       </div>
 
       <div class="outcomes-card">
-        <div class="device-tag"><i class="fa-solid fa-desktop"></i> PC & Desktop</div>
+        <div class="device-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2"/>
+            <line x1="8" y1="21" x2="16" y2="21"/>
+            <line x1="12" y1="17" x2="12" y2="21"/>
+          </svg>
+          PC & Desktop
+        </div>
         <h3>High-Resolution Precision</h3>
         <p>For desktop users, we deliver high-impact widescreen layouts that present clear visual hierarchies, intuitive navigation, and quick lead capture points designed to boost engagement.</p>
         <ul class="check-list">
@@ -242,9 +246,9 @@
         </div>
       </div>
       
-      <div class="contact-inputs" style="margin-top: 1.5rem; display: flex; gap: 1rem; flex-wrap: wrap;">
-        <input type="text" id="client-name" placeholder="Your Name" style="flex: 1; padding: 10px; background: #141414; border: 1px solid #262626; color: #fff; border-radius: 6px;" required>
-        <input type="tel" id="client-phone" placeholder="Phone Number" style="flex: 1; padding: 10px; background: #141414; border: 1px solid #262626; color: #fff; border-radius: 6px;" required>
+      <div class="contact-inputs">
+        <input type="text" id="client-name" placeholder="Your Name" required>
+        <input type="tel" id="client-phone" placeholder="Phone Number" required>
       </div>
       <div class="summary-footer">
         <div>
@@ -268,7 +272,40 @@
   <script src="js/script.js"></script>
 
   <script>
-    document.addEventListener('DOMContentLoaded', checkAuthState);
+    document.addEventListener('DOMContentLoaded', () => {
+      checkAuthState();
+      setupMobileNav();
+    });
+
+    function setupMobileNav() {
+      const toggle = document.getElementById('nav-toggle');
+      const links = document.getElementById('nav-links');
+      if (!toggle || !links) return;
+
+      const menuIcon = toggle.querySelector('.icon-menu');
+      const closeIcon = toggle.querySelector('.icon-close');
+
+      toggle.addEventListener('click', () => {
+        const isOpen = links.classList.toggle('active');
+        if (menuIcon && closeIcon) {
+          menuIcon.style.display = isOpen ? 'none' : 'block';
+          closeIcon.style.display = isOpen ? 'block' : 'none';
+        }
+      });
+
+      // Close menu when clicking on navigation links
+      links.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth <= 880) {
+            links.classList.remove('active');
+            if (menuIcon && closeIcon) {
+              menuIcon.style.display = 'block';
+              closeIcon.style.display = 'none';
+            }
+          }
+        });
+      });
+    }
 
     function checkAuthState() {
       const token = localStorage.getItem('kinetic_token');

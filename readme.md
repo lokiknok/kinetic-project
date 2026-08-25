@@ -77,25 +77,22 @@ python app.py
 Visit http://localhost:5000 in your browser.
 
 🌐 Free Deployment Guide (Render)
-This repository is structured for zero-configuration hosting on Render (or Railway / Heroku).
+This repository is configured for zero-configuration hosting on Render with either Blueprint or Web Service deployment.
 
-Push your project to a GitHub repository.
+### Option 1: Automatic Blueprint (Recommended)
+1. Push your repository to GitHub.
+2. Log into [Render.com](https://render.com) and click **New +** > **Blueprint**.
+3. Select your repository. Render will automatically read `render.yaml` and configure everything.
+4. Click **Apply**.
 
-Sign in to Render.com and click New + > Web Service.
-
-Connect your GitHub repository.
-
-Set the build parameters as follows:
-
-Root Directory: backend
-
-Runtime: Python 3
-
-Build Command: pip install -r requirements.txt
-
-Start Command: gunicorn app:app
-
-Click Create Web Service.
+### Option 2: Manual Web Service Setup
+1. On Render, click **New +** > **Web Service**.
+2. Connect your GitHub repository.
+3. Configure the settings:
+   - **Environment:** `Python 3`
+   - **Build Command:** `pip install -r requirements.txt`
+   - **Start Command:** `gunicorn --chdir backend app:app` (or if Root Directory is set to `backend`, use `gunicorn app:app`)
+4. Click **Create Web Service**.
 
 🛡️ API Endpoints
 Public Routes
